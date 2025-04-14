@@ -66,10 +66,10 @@ class ColorFeedback:
 
 
 # if __name__ == "__main__":
-#     # Suppose the secret word is 'apple' and the user's guess is 'ample'
+#     #secret word is 'apple' 
+#     #user's guess is 'ample'
 #     secret = "apple"
-#     guess = "ample"
+#     guess = "algin"
 #     feedback_obj = Feedback(secret, guess)
 #     result = feedback_obj.compare_words()
-#     # The ColorFeedback class now prints text markers instead of colors.
 #     ColorFeedback(result).print_feedback()
