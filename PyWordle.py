@@ -1,2 +1,5 @@
-from colorama import just_fix_windows_console
-just_fix_windows_console()
+from Gameplay import WordleGameplay
+
+if __name__ == "__main__":
+    game = WordleGameplay("words.txt")
+    game.play()
