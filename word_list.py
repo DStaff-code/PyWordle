@@ -17,3 +17,12 @@ class Wordlist:
     
     def get_words(self):
         return self.words
+    
+
+# if __name__ == "__main__":
+#     wordlist = Wordlist("words.txt")
+#     words = wordlist.get_words()
+    
+#     print("List of 5-letter words:")
+#     for index, word in enumerate(words, start=1):
+#         print(f"{index:4}: {word}")

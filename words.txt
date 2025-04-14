@@ -5353,7 +5353,6 @@ unsay
 liers
 piing
 weald
-sexed
 folic
 poxed
 anile
@@ -5369,7 +5368,6 @@ teaks
 aioli
 awing
 anent
-feces
 redip
 wists
 prats
@@ -5449,9 +5447,7 @@ swive
 lilty
 micks
 arity
-pasha
 finif
-oinky
 gutty
 tetra
 wises
@@ -5508,7 +5504,6 @@ gloms
 beano
 muley
 barky
-tunny
 auric
 funks
 gaffs
@@ -5536,7 +5531,6 @@ mashy
 miens
 nonny
 olios
-grook
 sates
 agley
 corgi
@@ -5545,16 +5539,11 @@ doser
 apsos
 xored
 laker
-playa
 selah
-malty
-dulse
-frigs
+dulses
 demit
-whoso
 rials
 sawer
-spics
 bedim
 snugs
 fanin
@@ -5563,7 +5552,6 @@ icers
 suers
 wizen
 koine
-topos
 shirr
 rifer
 feral
@@ -5663,7 +5651,6 @@ primo
 fatwa
 egger
 hempy
-snook
 hying
 fuzed
 barms
@@ -5685,7 +5672,6 @@ thens
 unfix
 doggo
 zooks
-diddy
 shmoo
 brusk
 prest
@@ -5707,8 +5693,6 @@ wonky
 stied
 hypos
 spumy
-osier
 roble
 rumba
-biffy
 pupal
