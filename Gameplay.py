@@ -42,13 +42,13 @@ class WordleGameplay:
         print("Keep guessing until you find the correct word!\n")
 
     def gameplay(self):
-        secret_word = random.choice(self.words)
+        secret_word = random.choice(self.words) #Chooses a random seceret word from the words list
         attempts = 0
         previous_guesses = set()
 
         while attempts < self.max_attempts:
             guess = input(f"Enter your guess (attempt {attempts+1}/{self.max_attempts}): ").lower().strip()
-            # Avoid duplicate guesses.
+            # Avoids duplicate guesses being made.
             if guess in previous_guesses:
                 print("You already guessed that word, try a different word.\n")
                 continue
@@ -56,7 +56,7 @@ class WordleGameplay:
 
             feedback_obj = Feedback(secret_word, guess)
             
-            #Validate guess length and word list membership
+            #Validates the guess length and that the word is in the word list
             if not feedback_obj.is_valid_length():
                 print("Your guess must be exactly 5 letters.\n")
                 continue
@@ -64,23 +64,24 @@ class WordleGameplay:
                 print("Your guess must be a valid English word from our list.\n")
                 continue
 
-            #Compare guess to secret word and generate feedback.
+            #Compare the guess that the user made to the secret word and then generate the feedback.
             feedback = feedback_obj.compare_words()
 
-            #Print color-coded feedback.
+            #Print out the color-coded feedback.
             ColorFeedback(feedback).print_feedback()
 
-            attempts += 1
+            attempts += 1 #Increase the counter on the attempt amount
 
-            #Win condition – guess matches secret word.
+            #The win condition - i.e. the guess matches the secret word.
             if guess == secret_word:
                 print("Congratulations! You've guessed the word correctly!\n")
                 break
         else:
-            #maximum attempts reached.
+            #What occurs when the maximum attempts are reached.
             print("\nSorry, you've used all attempts. The correct word was:", secret_word.upper(),"\n")
 
     def play(self):
+        #Runs the loop code for restarting the gameplay or ending the attempt.
         while True:
             self.print_instructions()
             self.gameplay()

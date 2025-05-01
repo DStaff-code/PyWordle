@@ -1,12 +1,13 @@
-#initializing wordlist
+#Initializes the words text file where secert words are pulled from
 class Wordlist:
     def __init__(self, filename):
         self.filename = filename
         self.words = self.load_words()
 
     def load_words(self):
+        #loads the words from the text file into the program to be used
         with open(self.filename, 'r') as file:
-            # Strip newlines and filter for exactly five-letter words
+            #Strips newlines, then filters for all words that are exactly five-letters and finally appends them into a list
             words = []
             for line in file:
                 word = line.strip().lower()
@@ -16,6 +17,7 @@ class Wordlist:
 
     
     def get_words(self):
+        #encapsulates and prevents accidental mutation of words list for later calls
         return self.words
     
 

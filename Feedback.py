@@ -4,8 +4,8 @@ from colorama import Fore, Style
 
 class Feedback:
     def __init__(self, secret_word, user_guess):
-        self.secret_word = secret_word #secret_word (str): The word to be guessed.
-        self.user_guess = user_guess #user_guess (str): The current guess entered by the player.
+        self.secret_word = secret_word #The word to be guessed.
+        self.user_guess = user_guess #The current guess entered by the player.
 
     def is_valid_length(self): #Checks if the guess has exactly 5 letters.
         return len(self.user_guess) == 5
