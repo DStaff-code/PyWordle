@@ -13,12 +13,32 @@ class WordleGameplay:
         self.max_attempts = max_attempts
 
     def print_instructions(self):
-        print("Welcome to Wordle!")
-        print(f"Guess the five-letter word by typing it into the terminal in {self.max_attempts} attempts.")
+        print(f'  _____    __          __           _ _      ')
+        print(f' |  __ \   \ \        / /          | | |     ')
+        print(f' | |__) |   \ \  /\  / /__  _ __ __| | | ___ ')
+        print(f' |  ___/ | | \ \/  \/ / _ \| \'__/ _` | |/ _ \ ')
+        print(f' | |   | |_| |\  /\  / (_) | | | (_| | |  __/')
+        print(f' |_|    \__, | \/  \/ \___/|_|  \__,_|_|\___|')
+        print(f'         __/ |                               ')
+        print(f'        |___/                               ')
+        print(f'                 \     /')
+        print(f'             \    o ^ o    /')
+        print(f'               \ (     ) /')
+        print(f'    ____________(%%%%%%%)____________')
+        print(f'   (     /   /  )%%%%%%%(  \   \     )')
+        print(f'   (___/___/__/           \__\___\___)')
+        print(f'      (     /  /(%%%%%%%)\  \     )')
+        print(f'       (__/___/ (%%%%%%%) \___\__)')
+        print(f'               /(       )\ ')
+        print(f'             /   (%%%%%)   \ ')
+        print(f'                  (%%%)')
+        print(f'                    ! \n')
+        print("Welcome to Wordle! \n")
+        print(f"Guess the five-letter word by typing it into the terminal in {self.max_attempts} attempts. \n")
         print("The game will then provide feedback for your guess:")
         print("A " + Fore.GREEN + "Green" + Style.RESET_ALL + " letter indicates that the letter is correct and in the correct position.")
         print("A " + Fore.YELLOW + "Yellow" + Style.RESET_ALL + " letter indicates that the letter is correct but in the wrong position.")
-        print("A " + Fore.LIGHTBLACK_EX + "Gray" + Style.RESET_ALL + " letter indicates that the letter is incorrect and not in the word.")
+        print("A " + Fore.LIGHTBLACK_EX + "Gray" + Style.RESET_ALL + " letter indicates that the letter is incorrect and not in the word.\n")
         print("Keep guessing until you find the correct word!\n")
 
     def gameplay(self):
@@ -30,7 +50,7 @@ class WordleGameplay:
             guess = input(f"Enter your guess (attempt {attempts+1}/{self.max_attempts}): ").lower().strip()
             # Avoid duplicate guesses.
             if guess in previous_guesses:
-                print("You already guessed that word, try a different word.")
+                print("You already guessed that word, try a different word.\n")
                 continue
             previous_guesses.add(guess)
 
@@ -38,10 +58,10 @@ class WordleGameplay:
             
             #Validate guess length and word list membership
             if not feedback_obj.is_valid_length():
-                print("Your guess must be exactly 5 letters.")
+                print("Your guess must be exactly 5 letters.\n")
                 continue
             if not feedback_obj.is_valid_word(self.words):
-                print("Your guess must be a valid English word from our list.")
+                print("Your guess must be a valid English word from our list.\n")
                 continue
 
             #Compare guess to secret word and generate feedback.
@@ -54,17 +74,17 @@ class WordleGameplay:
 
             #Win condition – guess matches secret word.
             if guess == secret_word:
-                print("Congratulations! You've guessed the word correctly!")
+                print("Congratulations! You've guessed the word correctly!\n")
                 break
         else:
             #maximum attempts reached.
-            print("Sorry, you've used all attempts. The correct word was:", secret_word.upper())
+            print("\nSorry, you've used all attempts. The correct word was:", secret_word.upper(),"\n")
 
     def play(self):
         while True:
             self.print_instructions()
             self.gameplay()
-            again = input("Do you want to play again? (y/n): ").lower().strip()
+            again = input("\nDo you want to play again? (y/n): ").lower().strip()
             if again == 'n' or again =='no':
-                print("Thanks for playing!")
+                print("\nThanks for playing!")
                 break

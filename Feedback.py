@@ -61,7 +61,7 @@ class ColorFeedback:
                 colored_string += Fore.YELLOW + letter.upper() + " "
             else:
                 colored_string += Fore.LIGHTBLACK_EX + letter.upper() + " "
-        print(colored_string + Style.RESET_ALL)
+        print(colored_string + Style.RESET_ALL, "\n")
 
 
 
@@ -73,3 +73,8 @@ class ColorFeedback:
 #     feedback_obj = Feedback(secret, guess)
 #     result = feedback_obj.compare_words()
 #     ColorFeedback(result).print_feedback()
+class Alphabet:
+    print(f'+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+    print(f'|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|')
+    print(f'+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+')
+    pass
