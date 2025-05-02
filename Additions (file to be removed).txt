@@ -1,4 +1,0 @@
-*** Game is fully functioning as expected. Please double check and review to ensure the program handles any 
-and all bad input that could come from the user. ***
-
-You’ve used some comments, but I recommend cleaning them up and using them throughout your code.

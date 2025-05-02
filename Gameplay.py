@@ -89,11 +89,21 @@ class WordleGameplay:
             print("\nSorry, you've used all attempts. The correct word was:", secret_word.upper(),"\n")
 
     def play(self):
-        #Runs the loop code for restarting the gameplay or ending the attempt.
+        # Runs the loop for restarting the gameplay or ending the attempt.
         while True:
             self.print_instructions()
             self.gameplay()
-            again = input("\nDo you want to play again? (y/n): ").lower().strip()
-            if again == 'n' or again =='no':
+
+            while True:
+                try:
+                    again = input("\nDo you want to play again? (yes/no): ").lower().strip()
+                    if again not in ['y', 'yes', 'n', 'no']:
+                        raise ValueError("Invalid input. Please enter yes or no.")
+                    break  # Valid input, break this inner loop
+                except ValueError as ve:
+                    #except that is ran if an invalid ending or restarting input is given by the user
+                    print(f"\n{ve}")
+
+            if again in ['n', 'no']:
                 print("\nThanks for playing!")
                 break
