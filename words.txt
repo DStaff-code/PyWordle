@@ -3877,7 +3877,6 @@ scion
 henna
 kraut
 lifer
-prigs
 bebop
 gages
 gazer
@@ -3885,8 +3884,6 @@ fanny
 gibes
 aural
 tempi
-hooch
-rapes
 snuck
 harts
 techs
