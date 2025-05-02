@@ -105,5 +105,6 @@ class WordleGameplay:
                     print(f"\n{ve}")
 
             if again in ['n', 'no']:
-                print("\nThanks for playing!")
+                print("\n   Thanks for playing!")
+                print(f'●▬▬▬▬๑▬▬▬▬▬๑▬▬▬▬▬๑▬▬▬▬▬● \n')
                 break
