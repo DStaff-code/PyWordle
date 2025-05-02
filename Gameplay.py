@@ -1,8 +1,9 @@
 import random
 from colorama import Fore, Style, init
-# Initialize Colorama
+#Initialize Colorama
 init(autoreset=True)
 
+#Imported classes
 from word_list import Wordlist
 from Feedback import Feedback, ColorFeedback
 
@@ -13,6 +14,7 @@ class WordleGameplay:
         self.max_attempts = max_attempts
 
     def print_instructions(self):
+        #Game start screen and game instructions
         print(f'                  _____    __          __           _ _      ')
         print(f'                 |  __ \   \ \        / /          | | |     ')
         print(f'                 | |__) |   \ \  /\  / /__  _ __ __| | | ___ ')
@@ -50,11 +52,11 @@ class WordleGameplay:
     def gameplay(self):
         secret_word = random.choice(self.words) #Chooses a random seceret word from the words list
         attempts = 0
-        previous_guesses = set()
+        previous_guesses = set() #Uses sets instead of other list types because it ensures uniqueness and quick lookups of list items in comparison to other list types
 
         while attempts < self.max_attempts:
             guess = input(f"Enter your guess (attempt {attempts+1}/{self.max_attempts}): ").lower().strip()
-            # Avoids duplicate guesses being made.
+            # Avoids any duplicate guesses being made.
             if guess in previous_guesses:
                 print("You already guessed that word, try a different word.\n")
                 continue
@@ -70,10 +72,10 @@ class WordleGameplay:
                 print("Your guess must be a valid English word from our list.\n")
                 continue
 
-            #Compare the guess that the user made to the secret word and then generate the feedback.
+            #Compares the guesses that the user made to the secret word and then generate the feedback for the user.
             feedback = feedback_obj.compare_words()
 
-            #Print out the color-coded feedback.
+            #Takes the generated feedback and then prints out the color-coded feedback for the user.
             ColorFeedback(feedback).print_feedback()
 
             attempts += 1 #Increase the counter on the attempt amount
