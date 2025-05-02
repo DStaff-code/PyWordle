@@ -1,10 +1,4 @@
-*** 1. Game is fully functioning as expected. Please double check and review to ensure the program handles any 
-and all bad input that could come from the user. 
+*** Game is fully functioning as expected. Please double check and review to ensure the program handles any 
+and all bad input that could come from the user. ***
 
-*** 2. The terminal is difficult to read. Consider adding spacing, characters, ASCII art to help make the terminal more 
-readable and even fun for the user
-
-3. Consider adding a feature that shows the user the letters they have already guessed. This isn’t in the original 
-worlde game, but may be a nice feature to add.  --- ASCII Art to cover
-
-4. You’ve used some comments, but I recommend cleaning them up and using them throughout your code.
+You’ve used some comments, but I recommend cleaning them up and using them throughout your code.
